@@ -8,44 +8,44 @@
     <script src='form.js' defer></script>
 </head>
 <body>
-    <form novalidate>
+    <form id="form" novalidate>
         <h1>Form Parctice</h1>
         <p>
             <label for='firstName'>First name:</label>
-            <input type='text' name='firstName' id="firstName" required minlength="2">
-            <span aria-live='polite' class='error'></span>
+            <input type='text' name='firstName' class='formInput' id='firstName' required minlength='2'>
+            <span aria-live='polite' class='error' id='fNameError'></span>
         </p>
         <p>
             <label for='lastName'>Last name:</label>
-            <input type='text' name='lastName' id="lastName" required minlength="2">
-            <span aria-live='polite' class='error'></span>
+            <input type='text' name='lastName' class='formInput' id='lastName' required minlength='2'>
+            <span aria-live='polite' class='error' id='lNameError'></span>
         </p>
         <p>
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" required>
-            <span aria-live="polite" class="error"></span>
+            <label for='email'>E-mail:</label>
+            <input type='email' name='email' class='formInput' id='email' required>
+            <span aria-live='polite' class='error' id='emailError'></span>
         </p>
-        <p id="zipCodeP">
-            <label for="zipCode">Zip Code:</label>
-            <input type="number" name="zipCode" id="zipCode" required min="1000" max="9999">
-            <span aria-live="polite" class="error"></span>
+        <p id='zipCodeP'>
+            <label for='zipCode'>Zip Code:</label>
+            <input type='number' name='zipCode' class='formInput' id='zipCode' required min='1000' max='9999'>
+            <span aria-live='polite' class='error' id='zipCodeError'></span>
         </p>
-        <p id="countryP">
+        <p id='countryP'>
             <label for='country'>Your country:</label>
-            <input type='text' name='country' id="country" required>
-            <span aria-live="polite" class="error"></span>
+            <input type='text' name='country' class='formInput' id='country' required>
+            <span aria-live='polite' class='error' id='countryError'></span>
         </p>
         <p>
             <label for='password'>Password:</label>
-            <input type="password" name="password" id="password" required minlength="8">
-            <span aria-live="polite" class="error"></span>
+            <input type='password' name='password' class='formInput' id='password' required minlength='8'>
+            <span aria-live='polite' class='error' id='passwordError'></span>
         </p>
         <p>
-            <label for="passwordValid">Password again:</label>
-            <input type="password" name="passwordValid" id="passwordValid" required>
-            <span aria-live="polite" class="error"></span>
+            <label for='passwordValid'>Password again:</label>
+            <input type='password' name='passwordValid' class='formInput' id='passwordValid' required>
+            <span aria-live='polite' class='error' id='passwordValidError'></span>
         </p>
-        <button type="submit" id="submit">Submit</button>
+        <button type='submit' id='submit'>Submit</button>
     </form>
 </body>
 </html>
