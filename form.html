@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Form Practice</title>
-    <link rel="stylesheet" href="form.css">
-    <script src="form.js" defer></script>
+    <link rel='stylesheet' href='form.css'>
+    <script src='form.js' defer></script>
 </head>
 <body>
-    <form>
-
+    <form novalidate>
+        <h1>Form Parctice</h1>
+        <p>
+            <label for='firstName'>First name:</label>
+            <input type='text' name='firstName' id="firstName" required minlength="2">
+            <span aria-live='polite' class='error'></span>
+        </p>
+        <p>
+            <label for='lastName'>Last name:</label>
+            <input type='text' name='lastName' id="lastName" required minlength="2">
+            <span aria-live='polite' class='error'></span>
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required>
+            <span aria-live="polite" class="error"></span>
+        </p>
+        <p id="zipCodeP">
+            <label for="zipCode">Zip Code:</label>
+            <input type="number" name="zipCode" id="zipCode" required min="1000" max="9999">
+            <span aria-live="polite" class="error"></span>
+        </p>
+        <p id="countryP">
+            <label for='country'>Your country:</label>
+            <input type='text' name='country' id="country" required>
+            <span aria-live="polite" class="error"></span>
+        </p>
+        <p>
+            <label for='password'>Password:</label>
+            <input type="password" name="password" id="password" required minlength="8">
+            <span aria-live="polite" class="error"></span>
+        </p>
+        <p>
+            <label for="passwordValid">Password again:</label>
+            <input type="password" name="passwordValid" id="passwordValid" required>
+            <span aria-live="polite" class="error"></span>
+        </p>
+        <button type="submit" id="submit">Submit</button>
     </form>
 </body>
 </html>
